@@ -380,11 +380,13 @@ body {
 
 /* Mensaje de transición */
 .transition-message {
-    padding: 8px 0;
+    padding: 15px 0;
     background: linear-gradient(135deg, #9333EA 0%, #C084FC 100%);
     text-align: center;
     position: relative;
     z-index: 5;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 .transition-text {
@@ -746,7 +748,8 @@ body {
     }
     
     .transition-message {
-        padding: 5px 0;
+        padding: 10px 0;
+        margin-top: 15px;
     }
     
     .transition-text {
@@ -787,6 +790,10 @@ body {
 
 /* Breakpoint para móviles medianos */
 @media (max-width: 600px) {
+    .transition-message {
+        margin-top: 10px;
+    }
+    
     .transition-text {
         font-size: 0.9rem;
     }
@@ -850,6 +857,10 @@ body {
     }
     
     /* Ajustes adicionales para móviles muy pequeños */
+    .transition-message {
+        margin-top: 8px;
+    }
+    
     .transition-text {
         font-size: 0.8rem;
     }
@@ -881,6 +892,10 @@ body {
 
 /* Breakpoint para móviles muy pequeños (menos de 400px) */
 @media (max-width: 400px) {
+    .transition-message {
+        margin-top: 5px;
+    }
+    
     .transition-text {
         font-size: 0.7rem;
     }
