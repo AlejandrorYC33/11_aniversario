@@ -378,6 +378,29 @@ body {
     margin: 0;
 }
 
+/* Mensaje de transición */
+.transition-message {
+    padding: 20px 0;
+    background: linear-gradient(135deg, #9333EA 0%, #C084FC 100%);
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.transition-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
 /* Mensaje final romántico */
 .final-message {
     padding: 80px 0 300px 0;
@@ -385,7 +408,7 @@ body {
     color: white;
     position: relative;
     overflow: hidden;
-    margin-top: 300px;
+    margin-top: 0;
     clear: both;
     z-index: 1;
     min-height: 100vh;
@@ -721,6 +744,14 @@ body {
         padding: 40px 0 5px 0;
     }
     
+    .transition-message {
+        padding: 15px 0;
+    }
+    
+    .transition-text {
+        font-size: 1.2rem;
+    }
+    
     .final-message {
         margin-top: 0;
         padding: 20px 0 20px 0;
@@ -755,6 +786,10 @@ body {
 
 /* Breakpoint para móviles medianos */
 @media (max-width: 600px) {
+    .transition-text {
+        font-size: 1.1rem;
+    }
+    
     .final-message {
         margin-top: 0;
         padding: 15px 0 20px 0;
@@ -814,6 +849,10 @@ body {
     }
     
     /* Ajustes adicionales para móviles muy pequeños */
+    .transition-text {
+        font-size: 1rem;
+    }
+    
     .final-message {
         margin-top: 0;
         padding: 15px 0 20px 0;
@@ -841,6 +880,10 @@ body {
 
 /* Breakpoint para móviles muy pequeños (menos de 400px) */
 @media (max-width: 400px) {
+    .transition-text {
+        font-size: 0.9rem;
+    }
+    
     .final-message {
         margin-top: 0;
         padding: 10px 0 20px 0;
