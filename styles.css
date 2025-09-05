@@ -716,15 +716,15 @@ body {
         margin-bottom: 1rem;
     }
     
-    /* Ajustes específicos para móviles - más espacio */
+    /* Ajustes específicos para móviles - JavaScript manejará el espaciado */
     .reasons-section {
-        padding: 60px 0 200px 0;
+        padding: 60px 0 50px 0;
     }
     
     .final-message {
-        margin-top: 300px;
-        padding: 60px 0 250px 0;
-        min-height: 100vh;
+        margin-top: 0;
+        padding: 60px 0 100px 0;
+        min-height: auto;
     }
     
     .video-container {
@@ -756,9 +756,9 @@ body {
 /* Breakpoint para móviles medianos */
 @media (max-width: 600px) {
     .final-message {
-        margin-top: 400px;
-        padding: 50px 0 200px 0;
-        min-height: 100vh;
+        margin-top: 0;
+        padding: 50px 0 100px 0;
+        min-height: auto;
     }
 }
 
@@ -815,9 +815,9 @@ body {
     
     /* Ajustes adicionales para móviles muy pequeños */
     .final-message {
-        margin-top: 500px;
-        padding: 40px 0 180px 0;
-        min-height: 120vh;
+        margin-top: 0;
+        padding: 40px 0 100px 0;
+        min-height: auto;
     }
     
     .message-text {
@@ -842,12 +842,12 @@ body {
 /* Breakpoint para móviles muy pequeños (menos de 400px) */
 @media (max-width: 400px) {
     .final-message {
-        margin-top: 600px;
-        padding: 30px 0 200px 0;
-        min-height: 150vh;
+        margin-top: 0;
+        padding: 30px 0 100px 0;
+        min-height: auto;
     }
     
     .reasons-section {
-        padding: 40px 0 250px 0;
+        padding: 40px 0 50px 0;
     }
 }
