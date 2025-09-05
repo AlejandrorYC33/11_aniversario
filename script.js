@@ -574,3 +574,57 @@ messageStyle.textContent = `
     }
 `;
 document.head.appendChild(messageStyle);
+
+// Función para ajustar espaciado automáticamente en móviles
+function adjustMobileSpacing() {
+    const isMobile = window.innerWidth <= 768;
+    if (!isMobile) return;
+    
+    const reasonsSection = document.querySelector('.reasons-section');
+    const finalMessage = document.querySelector('.final-message');
+    
+    if (!reasonsSection || !finalMessage) return;
+    
+    // Calcular la altura del contenido de las razones
+    const reasonsHeight = reasonsSection.offsetHeight;
+    const reasonsTop = reasonsSection.offsetTop;
+    
+    // Calcular la posición donde debe empezar el mensaje final
+    const messageStartPosition = reasonsTop + reasonsHeight + 50; // 50px de separación
+    
+    // Aplicar el espaciado dinámico
+    finalMessage.style.marginTop = `${messageStartPosition}px`;
+    finalMessage.style.position = 'relative';
+    finalMessage.style.zIndex = '10';
+    
+    // Ajustar el padding del mensaje final según el tamaño de pantalla
+    const screenHeight = window.innerHeight;
+    const paddingBottom = Math.max(screenHeight * 0.2, 100); // Al menos 20% de la pantalla o 100px
+    finalMessage.style.paddingBottom = `${paddingBottom}px`;
+    
+    console.log(`Móvil detectado: ${window.innerWidth}px`);
+    console.log(`Altura razones: ${reasonsHeight}px`);
+    console.log(`Posición mensaje: ${messageStartPosition}px`);
+}
+
+// Aplicar ajustes cuando se carga la página
+document.addEventListener('DOMContentLoaded', function() {
+    // Esperar un poco para que se carguen todos los elementos
+    setTimeout(() => {
+        adjustMobileSpacing();
+    }, 500);
+});
+
+// Aplicar ajustes cuando se redimensiona la ventana
+window.addEventListener('resize', function() {
+    setTimeout(() => {
+        adjustMobileSpacing();
+    }, 100);
+});
+
+// Aplicar ajustes cuando se hace scroll (por si hay lazy loading)
+window.addEventListener('scroll', function() {
+    setTimeout(() => {
+        adjustMobileSpacing();
+    }, 100);
+});
