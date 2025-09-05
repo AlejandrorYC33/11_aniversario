@@ -380,7 +380,7 @@ body {
 
 /* Mensaje de transición */
 .transition-message {
-    padding: 20px 0;
+    padding: 8px 0;
     background: linear-gradient(135deg, #9333EA 0%, #C084FC 100%);
     text-align: center;
     position: relative;
@@ -388,11 +388,12 @@ body {
 }
 
 .transition-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     animation: pulse 2s infinite;
+    margin: 0;
 }
 
 @keyframes pulse {
@@ -745,11 +746,11 @@ body {
     }
     
     .transition-message {
-        padding: 15px 0;
+        padding: 5px 0;
     }
     
     .transition-text {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .final-message {
@@ -787,7 +788,7 @@ body {
 /* Breakpoint para móviles medianos */
 @media (max-width: 600px) {
     .transition-text {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
     
     .final-message {
@@ -850,7 +851,7 @@ body {
     
     /* Ajustes adicionales para móviles muy pequeños */
     .transition-text {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     
     .final-message {
@@ -881,7 +882,7 @@ body {
 /* Breakpoint para móviles muy pequeños (menos de 400px) */
 @media (max-width: 400px) {
     .transition-text {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
     
     .final-message {
