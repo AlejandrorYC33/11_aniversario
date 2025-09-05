@@ -589,18 +589,16 @@ function adjustMobileSpacing() {
     const reasonsHeight = reasonsSection.offsetHeight;
     const reasonsTop = reasonsSection.offsetTop;
     
-    // Calcular la posición donde debe empezar el mensaje final
-    const messageStartPosition = reasonsTop + reasonsHeight + 50; // 50px de separación
+    // Calcular la posición donde debe empezar el mensaje final (separación mínima)
+    const messageStartPosition = reasonsTop + reasonsHeight + 20; // Solo 20px de separación
     
     // Aplicar el espaciado dinámico
     finalMessage.style.marginTop = `${messageStartPosition}px`;
     finalMessage.style.position = 'relative';
     finalMessage.style.zIndex = '10';
     
-    // Ajustar el padding del mensaje final según el tamaño de pantalla
-    const screenHeight = window.innerHeight;
-    const paddingBottom = Math.max(screenHeight * 0.2, 100); // Al menos 20% de la pantalla o 100px
-    finalMessage.style.paddingBottom = `${paddingBottom}px`;
+    // Padding mínimo del mensaje final
+    finalMessage.style.paddingBottom = '50px'; // Padding mínimo fijo
     
     console.log(`Móvil detectado: ${window.innerWidth}px`);
     console.log(`Altura razones: ${reasonsHeight}px`);
