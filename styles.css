@@ -380,15 +380,15 @@ body {
 
 /* Mensaje final romántico */
 .final-message {
-    padding: 80px 0 1000px 0;
+    padding: 80px 0 2000px 0;
     background: linear-gradient(135deg, #6B46C1 0%, #9333EA 50%, #C084FC 100%);
     color: white;
     position: relative;
     overflow: hidden;
-    margin-top: 1200px;
+    margin-top: 3000px;
     clear: both;
     z-index: 1;
-    min-height: 300vh;
+    min-height: 500vh;
 }
 
 .final-message::before {
@@ -718,13 +718,13 @@ body {
     
     /* Ajustes específicos para móviles - más espacio */
     .reasons-section {
-        padding: 60px 0 600px 0;
+        padding: 60px 0 1500px 0;
     }
     
     .final-message {
-        margin-top: 1000px;
-        padding: 60px 0 600px 0;
-        min-height: 240vh;
+        margin-top: 2500px;
+        padding: 60px 0 1500px 0;
+        min-height: 500vh;
     }
     
     .video-container {
@@ -756,9 +756,9 @@ body {
 /* Breakpoint para móviles medianos */
 @media (max-width: 600px) {
     .final-message {
-        margin-top: 1200px;
-        padding: 50px 0 500px 0;
-        min-height: 220vh;
+        margin-top: 3000px;
+        padding: 50px 0 1000px 0;
+        min-height: 500vh;
     }
 }
 
@@ -815,9 +815,9 @@ body {
     
     /* Ajustes adicionales para móviles muy pequeños */
     .final-message {
-        margin-top: 1400px;
-        padding: 40px 0 400px 0;
-        min-height: 200vh;
+        margin-top: 3500px;
+        padding: 40px 0 800px 0;
+        min-height: 400vh;
     }
     
     .message-text {
